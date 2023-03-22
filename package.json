@@ -10,7 +10,7 @@
 		"clean": "hexo clean",
 		"deploy": "hexo deploy",
 		"server": "hexo server",
-		"release": "npm run publish && standard-version && git push --follow-tags origin master",
+		"release": "standard-version && git push --follow-tags origin master",
 		"release:minor": "standard-version --release-as minor && git push --follow-tags origin master",
 		"release:major": "standard-version --release-as major && git push --follow-tags origin master"
 	},
