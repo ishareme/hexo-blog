@@ -503,7 +503,7 @@ messenger:
 # --------------------------------------
 footer:
     iconsbar: true
-    links: true
+    links: false
     owner:
         enable: true
         since: 2017
