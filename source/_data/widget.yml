@@ -1,0 +1,8 @@
+# 这里填top表示所有地方都显示，bottom表示只在非文章页面显示，如主页等等
+bottom:
+  - class_name:
+    id_name: weibo
+    name: 微博热搜
+    icon: fa-brands fa-weibo
+    order: -1
+    html: <div id="weiboContent"></div> # 注意这里，我放了一个加载图片，在加载之前会显示，你可以选择删除或者放一个加载图片。

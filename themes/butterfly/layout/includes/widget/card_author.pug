@@ -1,0 +1,59 @@
+if theme.aside.card_author.enable
+  //- .card-widget.card-info
+  //-   .is-center
+  //-     .avatar-img
+  //-       img(src=url_for(theme.avatar.img) onerror=`this.onerror=null;this.src='` + url_for(theme.error_img.flink) + `'` alt="avatar")
+  //-     .author-info__name= config.author
+  //-     .author-info__description!= theme.aside.card_author.description || config.description
+
+  //-   .card-info-data.site-data.is-center
+  //-     a(href=url_for(config.archive_dir) + '/')
+  //-       .headline= _p('aside.articles')
+  //-       .length-num= site.posts.length
+  //-     a(href=url_for(config.tag_dir) + '/')
+  //-       .headline= _p('aside.tags')
+  //-       .length-num= site.tags.length
+  //-     a(href=url_for(config.category_dir) + '/')
+  //-       .headline= _p('aside.categories') 
+  //-       .length-num= site.categories.length
+
+  //-   if theme.aside.card_author.button.enable
+  //-     a#card-info-btn(href=theme.aside.card_author.button.link)
+  //-       i(class=theme.aside.card_author.button.icon)
+  //-       span=theme.aside.card_author.button.text
+  
+  //-   if(theme.social)
+  //-       .card-info-social-icons.is-center
+  //-         !=fragment_cache('social', function(){return partial('includes/header/social')}) 
+  .card-widget.card-info
+    .card-content
+      .card-info-avatar.is-center
+        - var hour = new Date().getHours()
+        - var helloTxt = (hour > 11 && hour <= 13) ? '中午好' : ((hour > 13 && hour <= 17) ? '下午好' : ((hour > 17 && hour <= 19) ? '晚上好' : (hour <= 4 || hour > 19) ? '晚安' : '早安'))
+        #author-info__sayhi.author-info__sayhi=`${helloTxt}！我是`
+        .author-info__name=config.author
+        .author-info__description 
+          span 这有关于
+          b 前端开发、前端工程
+          span 的学习工作记录，分享一些经验与想法，当然还有
+          b 生活
+          span 中的点点滴滴。
+          br
+        .author-info__description2 
+          b 很高兴认识你
+    .banner-button-group
+      a.banner-button(onclick="pjax.loadUrl('/about/')", data-pjax-state)
+        i.fas.fa-circle-chevron-right
+        span.banner-button-text 了解更多
+    if(theme.social)
+      .card-info-social-icons.is-center
+        each url, icon in theme.social
+          a.social-icon(href=url_for(trim(url.split('||')[0])) target="_blank" title=url.split('||')[1] === undefined ? '' : trim(url.split('||')[1]))
+            i(class=icon)
+        //- a.social-icon(href="/", rel="external nofollow", target="_blank", title="Github")
+        //-   i.fab.fa-github
+        //- a.social-icon(href="/", rel="external nofollow", target="_blank", title="Email")
+        //-   i.fas.fa-envelope
+      
+
+          

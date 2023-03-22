@@ -1,0 +1,69 @@
+if theme.footer.iconsbar
+  #footer_deal
+    a.deal_link(href="https://github.com/xlenco" title="github"  target="_blank")
+      i.fab.fa-github
+    a.deal_link(href="https://qm.qq.com/cgi-bin/qm/qr?k=eHT6b6llnxiiT4IjuaBXvselTBWRK7-b&noverify=0" title="qq" target="_blank")
+      i.fab.fa-weixin
+    a.deal_link(href="https://github.com/xlenco" title="github"  target="_blank")
+      i.fab.fa-facebook-f
+    img.footer_mini_logo.entered.loading(style="border-radius:50%" src='https://xlenco.onmicrosoft.cn/img/head.webp' onclick="btf.scrollToDest(0,500)" title="返回顶部")
+    a.deal_link(href="https://github.com/xlenco" title="github"  target="_blank")
+      i.fab.fa-pinterest-p
+    a.deal_link(href="https://qm.qq.com/cgi-bin/qm/qr?k=eHT6b6llnxiiT4IjuaBXvselTBWRK7-b&noverify=0" title="qq" target="_blank")
+      i.fab.fa-qq
+    a.deal_link(href="mailto:1044865083@qq.com" title="mail")
+      i.fa-regular.fa-envelope
+
+if theme.footer.links
+  #footer-links-container
+    .footer-group
+      h3.footer-title 直达
+      .footer-links
+        a.footer-item(href="/" target="_blank") 我的主页
+        a.footer-item(href="/music") 音乐欣赏
+        a.footer-item(href="/harbour") 心灵港湾
+        a.footer-item(href="/random") 随机文章
+    .footer-group
+      h3.footer-title 分类
+      .footer-links
+        a.footer-item(href="/categories/📚学习笔记/") 学习笔记
+        a.footer-item(href="/categories/🦋魔改教程/") 魔改教程
+        a.footer-item(href="/categories/🌈算法笔记/") 算法笔记
+        a.footer-item(href="/categories/📙语法教程/") 语法教程
+    .footer-group
+      h3.footer-title 关于
+      .footer-links
+        a.footer-item(href="/about/") 关于我
+        a.footer-item(href="/charts/") 博客统计
+        a.footer-item(href="/archives") 文章归档
+        a.footer-item(href="/update") 更新记录
+    .footer-group
+      h3.footer-title 友链
+      .footer-links#friend-links-in-footer
+    .footer-group
+      h3.footer-title 协议
+      .footer-links
+        a.footer-item(href="/privacy/") 隐私协议
+        a.footer-item(href="/cookies/") Cookie
+        a.footer-item(href="/cc/") 版权协议
+
+#footer-banner
+  .footer-banner-links
+    .footer-banner-left
+      .footer-banner-left
+        #footer-banner-tips
+          - var now = new Date()
+          - var nowYear = now.getFullYear()
+          if theme.footer.owner.since && theme.footer.owner.since != nowYear
+            .copyright!= `Copyright © ${theme.footer.owner.since} - ${nowYear} ${config.title} All Rights Reserved.`
+          else
+            .copyright!= `&copy;${nowYear} By ${config.title}`
+
+    .footer-banner-right
+      a.footer-banner-link(href="/about/" title="about") 关于
+      a.footer-banner-link(href="https://beian.miit.gov.cn" target="_blank" rel="noopener external nofollow noreferrer") 粤ICP备2022108639号
+      a.footer-banner-link.cc(href="/cc/" title="cc协议")
+        i.fab.fa-creative-commons
+        i.fab.fa-creative-commons-by
+        i.fab.fa-creative-commons-nc
+        .fab.fa-creative-commons-sa

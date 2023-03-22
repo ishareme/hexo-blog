@@ -1,0 +1,36 @@
+#- cover: 封面图片链接
+#  timeline: '2020-10-01' # 日期，需要用''包裹
+#  link: 置顶文章链接，站内文章建议填相对链接
+#  title: 置顶文章标题
+#  description: 置顶文章描述
+- cover: https://source.unsplash.com/random/?javascript
+  timeline: '2023-02-10' # 日期，需要用''包裹
+  link: /posts/ed05e433.html
+  title: 购买一台服务器后要做什么呢(centos7为例，含docker)
+  description: 当我们购买一台云服务器之后，我们应该做什么呢？
+- cover: https://source.unsplash.com/random/?git
+  timeline: '2023-01-16'
+  link: /posts/56c169c.html
+  title: 前端工程化编程规范解决方案(Commitizen + Husky + Commitlint + lint-staged)
+  description: 每个人都有自己的代码风格，团队中如何做到自动规范？
+- cover: https://source.unsplash.com/random/?html
+  timeline: '2018-08-19'
+  link: /posts/70e5610b.html
+  title: 聊聊毕业设计系列 --- 系统实现
+  description: 当年毕业设计的项目，前后端全栈，看官要不要瞧瞧？
+- cover: https://source.unsplash.com/random/?coding
+  timeline: '2018-03-09'
+  link: /posts/acef70ce.html
+  title: HTTP缓存策略与增量更新总结
+  description: 合理的利用缓存是 web 性能优化的必要手段
+- cover: https://source.unsplash.com/random/?internet
+  timeline: '2019-01-12'
+  link: /posts/zw0c9c32.html
+  title: Video标签移动端兼容性问题总结
+  description: video标签在移动端下，各个机型兼容性问题解决
+- cover: https://source.unsplash.com/random/?programming
+  timeline: '2017-08-16'
+  link: /posts/783ed172.html
+  title: Markdown语法全面详解
+  description: 主要讲什么是Markdown语法，以及Markdown的用法
+

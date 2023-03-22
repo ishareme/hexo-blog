@@ -1,0 +1,11 @@
+version: '3'
+services:
+    hmz-blog:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        image: hmz-blog # 引用官网 nginx 镜像
+        container_name: hmz-blog
+        ports:
+            - 2023:80 # 宿主机可以用 127.0.0.1:8085 即可连接容器中的数据库
+        # volumes: 在 Dockerfile 都已配置完

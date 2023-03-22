@@ -1,0 +1,40 @@
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+# github actions 中文文档 https://docs.github.com/cn/actions/getting-started-with-github-actions
+
+name: deploy for prd
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+      #用ssh登录云服务器
+      - name: ssh login remote server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.ECS_HOST }}
+          username: ${{ secrets.ECS_USERNAME }}
+          password: ${{ secrets.ECS_PASSWORD }}
+          # 部署 deploy
+          script: |
+            pwd
+            cd /home/${{ secrets.ECS_USERNAME }}/hexo-blog
+            pwd
+            ls -a
+            sudo git remote add origin https://github.com/ishareme/hexo-blog.git
+            sudo git pull origin master 
+            sudo git remote remove origin # 删除 origin ，否则会暴露 github 密码
+            sudo git checkout ${{github.ref}}
+            sudo docker-compose build hmz-blog; # 和 docker-compose.yml service 名字一致
+            sudo docker-compose up -d;

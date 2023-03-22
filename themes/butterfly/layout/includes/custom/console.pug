@@ -1,0 +1,89 @@
+#console
+    .close-btn(onclick="st.hideConsole()")
+        i.fas.fa-circle-xmark
+    .console-card-group
+        .console-card-group-left
+            .console-card#card-newest-comments(onclick="st.hideConsole()")
+                .card-content
+                    .author-content-item-tips 互动
+                    span.author-content-item-title 最近评论
+                .aside-list
+                    .aside-list-item
+                        a.thumbnail(href="/link/#8b27a65318cd405b838869f08bc97260", data-pjax-state)
+                            img(alt="Smalldye." data-ll-status="loaded" class="entered loaded" src="https://thirdqq.qlogo.cn/g?b=sdk&amp;k=BIiakLZGuZTA4RT0DYiaCPsA&amp;kti=Y5KhNgAAAAE&amp;s=140&amp;t=1670081102")
+                            .name Smalldye.
+                        .content
+                            a.comment(href="/link/#8b27a65318cd405b838869f08bc97260" data-pjax-state) 嘿嘿~ 不是啦  谢谢~[图片] 
+                            time(datetime="2022-12-09T02:45:10.278Z") 最近
+                    .aside-list-item
+                        a.thumbnail(href="/link/#8b27a65318cd405b838869f08bc97260", data-pjax-state)
+                            img(alt="Smalldye." data-ll-status="loaded" class="entered loaded" src="https://thirdqq.qlogo.cn/g?b=sdk&amp;k=BIiakLZGuZTA4RT0DYiaCPsA&amp;kti=Y5KhNgAAAAE&amp;s=140&amp;t=1670081102")
+                            .name Smalldye.
+                        .content
+                            a.comment(href="/link/#8b27a65318cd405b838869f08bc97260" data-pjax-state) 嘿嘿~ 不是啦  谢谢~[图片] 
+                            time(datetime="2022-12-09T02:45:10.278Z") 最近
+                    .aside-list-item
+                        a.thumbnail(href="/link/#8b27a65318cd405b838869f08bc97260", data-pjax-state)
+                            img(alt="Smalldye." data-ll-status="loaded" class="entered loaded" src="https://thirdqq.qlogo.cn/g?b=sdk&amp;k=BIiakLZGuZTA4RT0DYiaCPsA&amp;kti=Y5KhNgAAAAE&amp;s=140&amp;t=1670081102")
+                            .name Smalldye.
+                        .content
+                            a.comment(href="/link/#8b27a65318cd405b838869f08bc97260" data-pjax-state) 嘿嘿~ 不是啦  谢谢~[图片] 
+                            time(datetime="2022-12-09T02:45:10.278Z") 最近
+        .console-card-group-right
+            .console-card.tags(onclick="st.hideConsole()")
+                .card-content
+                    .author-content-item-tips 标签
+                    .author-content-item-title 寻找感兴趣的领域
+                .card-tag-cloud
+                    a(href="/tags/AfterEffects/", data-pjax-state)
+                        span AfterEffects
+                        sup 11
+                    a(href="/tags/AfterEffects/", data-pjax-state)
+                        span AfterEffects
+                        sup 8
+                    a(href="/tags/AfterEffects/", data-pjax-state)
+                        span AfterEffects
+                        sup 11
+                    a(href="/tags/AfterEffects/", data-pjax-state)
+                        span AfterEffects
+                        sup 11
+                    a(href="/tags/AfterEffects/", data-pjax-state)
+                        span AfterEffects
+                        sup 11
+                    a(href="/tags/AfterEffects/", data-pjax-state)
+                        span AfterEffects
+                        sup 11
+
+            .console-card.history
+                ul.card-archive-list
+                    li.card-archive-list-item
+                        a.card-archive-list-link(href="/archives/2022/", data-pjax-state)
+                            .card-archive-list-date 2022
+                            .card-archive-list-count-group
+                                .card-archive-list-count 112
+                                .card-archive-list-count-unit 篇
+                    li.card-archive-list-item
+                        a.card-archive-list-link(href="/archives/2022/", data-pjax-state)
+                            .card-archive-list-date 2022
+                            .card-archive-list-count-group
+                                .card-archive-list-count 112
+                                .card-archive-list-count-unit 篇
+
+                    li.card-archive-list-item
+                        a.card-archive-list-link(href="/archives/2022/", data-pjax-state)
+                            .card-archive-list-date 2022
+                            .card-archive-list-count-group
+                                .card-archive-list-count 112
+                                .card-archive-list-count-unit 篇
+    .button-group
+        .console-btn-item#consoleDark(onclick="st.switchDarkMode()" title="显示模式切换" data-pjax-state)
+            a.darkmode_switchbutton(data-pjax-state)
+                i.fas.fa-moon(style="font-size: 1rem;")
+        .console-btn-item#consoleHideAside(onclick="st.hideAsideBtn()" title="边栏显示控制" data-pjax-state)
+            a.asideSwitch(data-pjax-state)
+                i.fas.fa-arrows-alt-h
+        .console-btn-item#consoleMusic(onclick="st.musicToggle()", title="音乐开关" data-pjax-state)
+            a.music-switch(data-pjax-state)
+                i.fas.fa-music
+    .console-mask(onclick="st.hideConsole()", href="javascript:void(0);", )
+
