@@ -1,6 +1,6 @@
 {
 	"name": "hmz-site",
-	"version": "1.1.10",
+	"version": "1.1.11",
 	"private": true,
 	"scripts": {
 		"dev": "hexo clean && hexo generate && hexo server -p 4002",
